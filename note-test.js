@@ -1,8 +1,7 @@
 function testNoteListDefaultisEmpty() {
     var note = new Note();
-    assert.isTrue(note.list === "");
+    expect.isTrue(note.list === "");
   };
   
   testNoteListDefaultisEmpty();
 
-  
