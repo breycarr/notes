@@ -1,18 +1,24 @@
 (function(exports) {
     function Note() {
-        this.list = []; 
+        this.list = [];
     };
 
-    this.new = function(input) {
-        this.list.push(input) 
-    }; 
+    Note.prototype.newNote = function(input) {
+        this.list.push(input)
+    };
 
-    this.show = function() { 
+    Note.prototype.showShortNote = function() {
         this.list.forEach(function(note) {
-            console.log(note); 
+            console.log(note.substring(0,20) + "...");
         });
     };
 
-    exports.Note = Note; 
-})(this); 
+    Note.prototype.showFullNote = function() {
+        this.list.forEach(function(note) {
+            console.log(note);
+        });
+    };
+
+    exports.Note = Note;
+})(this);
 

@@ -1,9 +1,14 @@
-function testNoteListDefaultisEmpty() {
+function testNoteListDefaultisEmpty(){
     var note = new Note();
-    expect.isTrue(note.list === "");
+    expect.isLengthZero(note.list);
   };
-  
+
   testNoteListDefaultisEmpty();
 
+  function testAddNewNote(){
+    var note = new Note();
+    note.newNote("Hello")
+    expect.include("Hello", note.list)
+  };
 
-  expect
+  testAddNewNote();
