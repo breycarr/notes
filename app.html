@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-  <html lang="en" dir="ltr">
+  <html lang="en">
     <head>
       <title>JS Notes</title>
     </head>
@@ -7,16 +7,26 @@
     <body>
 
       <h1>JS Notes</h1>
-      <form id="note input">
-      <input style="height:200px; width:500px" type="text" placeholder="write your note and click add"><br>
-      <input type="submit" value="Add note">
-      </form>
 
-      <script src='./note.js'>
-          $(document).ready(function() {
-          var note = new Note;
+
+      <textarea style="height:200px; width:250px" type="text" placeholder="write your note and click add" id="input"></textarea><br>
+      <button onclick="processNote()">Add note</button>
+
+      <p id="note area"></p>
+
+      <script src='./note.js'></script>
+      <script>window.onload = function() {
+
+      }
+        // button = document.getElementById('note adder');
+        var note;
+        note = new Note;
+        function processNote(){
+          var text = document.getElementById('input').value;
+          note.addNote(text);
+          document.getElementById('note area').innerHTML = note.showShortNote()
+          return false;
         }
-        </script>
-
+      </script>
     </body>
   </html>

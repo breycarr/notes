@@ -7,13 +7,13 @@ var expect = {
     //   }
     // },
 
-    // toEqual: function(assertionToCheck, other) {
-    //   if (assertionToCheck !== other) {
-    //     throw new Error("Assertion failed: " + assertionToCheck + " is not equal to " + other);
-    //   } else if (assertionToCheck === other) {
-    //   console.log("All is good!");
-    //   }
-    // },
+    toEqual: function(assertionToCheck, source) {
+      if (assertionToCheck !== source) {
+        throw new Error("Assertion failed: " + assertionToCheck + " is not equal to " + source);
+      } else if (assertionToCheck === source) {
+      console.log("All is good!");
+      }
+    },
 
     isLengthZero: function(assertionToCheck) {
       if (assertionToCheck.length !== 0) {
@@ -31,7 +31,3 @@ var expect = {
       }
     }
 };
-
-
-
-
