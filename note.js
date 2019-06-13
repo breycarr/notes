@@ -1,10 +1,10 @@
 (function(exports) {
     function Note() {
-        this.list = new Array;
+        this._list = new Array;
     };
 
     Note.prototype.addNote = function(input) {
-        this.list.push(input)
+        this._list.push(input)
     };
 
     Note.prototype.showFullNote = function() {
@@ -13,7 +13,7 @@
         // });
 
         // var index
-        return this.list
+        return this._list
         // for (index = 0; index < array.length -1 ; index++) {
         //     array[index]
         // };
