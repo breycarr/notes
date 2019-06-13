@@ -12,19 +12,18 @@
       <textarea style="height:200px; width:250px" type="text" placeholder="write your note and click add" id="input"></textarea><br>
       <button onclick="processNote()">Add note</button>
 
-      <p id="note area"></p>
+      <ul id="note area"></ul>
 
       <script src='./note.js'></script>
-      <script>window.onload = function() {
-
-      }
-        // button = document.getElementById('note adder');
+      <script>
         var note;
         note = new Note;
         function processNote(){
           var text = document.getElementById('input').value;
           note.addNote(text);
-          document.getElementById('note area').innerHTML = note.showShortNote()
+          var newLI = document.createElement('li');
+          newLI.appendChild(document.createTextNode(text.substring(0,20) + "..."))
+          document.getElementById('note area').appendChild(newLI)
           return false;
         }
       </script>
