@@ -1,8 +1,11 @@
 # Notes app user stories
+> Makers Academy Week 7
 
-## Makers Academy Week 7
+The task for this week was to create a pure JS front end Single Page web app for making and displaying notes.
 
-The goal of this project is to create a pure JS front end web app for making notes.
+## Installation
+
+
 
 ## User Stories
 ```
