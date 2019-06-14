@@ -3,7 +3,7 @@
 
 The task for this week was to create a pure JS front end Single Page web app for making and displaying notes.
 
-![Screenshot][public/images/Screenshot 2019-06-14 at 14.20.32.png]
+![Screenshot][/public/images/Screenshot 2019-06-14 at 14.20.32.png]
 
 ## Installation
 git clone this repo:
