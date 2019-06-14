@@ -2,8 +2,6 @@ window.onload = function() {
   var note, createButton;
   note = new Note;
 
-  // noteHeader = document.getElementById("title")
-  // noteHeader.addEventListener("click", sayHello)
   createButton = document.getElementById("create")
   createButton.addEventListener("click", processNote)
 
@@ -12,22 +10,19 @@ window.onload = function() {
 
     input = document.getElementById('input').value;
     note.addNote(input);
-    index = note.notePosition()
     document.getElementById('input').value = ""
+    output = input.substring(0,20)
+    index = note.notePosition()
     newLI = document.createElement('li');
     newLI.setAttribute("id", index)
-    output = input.substring(0,20)
     newLI.appendChild(document.createTextNode(output + "..."))
     newLI.addEventListener("click", showFullNote)
-    document.getElementById('note area').appendChild(newLI)
+    document.getElementById('notes area').appendChild(newLI)
   }
 
   function showFullNote(newLI) {
-    let elementId =  newLI.path[0].id
-    console.log(newLI)
-    console.log(elementId)
+    let elementId = newLI.path[0].id
+    var fullNote = note.getText(elementId)
+    document.write(fullNote)
   }
-  // function sayHello() {
-  //  document.write("Hello")
-  // }
 }
