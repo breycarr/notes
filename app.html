@@ -1,31 +1,21 @@
 <!DOCTYPE html>
   <html lang="en">
     <head>
+      <script src='./note.js'></script>
+      <script src='./controller.js'></script>
       <title>JS Notes</title>
     </head>
 
     <body>
 
-      <h1>JS Notes</h1>
+      <h1 id="title">JS Notes</h1>
 
 
       <textarea style="height:200px; width:250px" type="text" placeholder="write your note and click add" id="input"></textarea><br>
-      <button onclick="processNote()">Add note</button>
+      <button id="create">Create</button>
 
-      <ul id="note area"></ul>
+      <ul id="notes area"></ul>
 
-      <script src='./note.js'></script>
-      <script>
-        var note;
-        note = new Note;
-        function processNote(){
-          var text = document.getElementById('input').value;
-          note.addNote(text);
-          var newLI = document.createElement('li');
-          newLI.appendChild(document.createTextNode(text.substring(0,20) + "..."))
-          document.getElementById('note area').appendChild(newLI)
-          return false;
-        }
-      </script>
+
     </body>
   </html>

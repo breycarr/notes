@@ -1,23 +1,18 @@
 (function(exports) {
     function Note() {
-        this.list = new Array;
+        this._list = new Array;
     };
 
     Note.prototype.addNote = function(input) {
-        this.list.push(input)
+        this._list.push(input)
     };
 
-    Note.prototype.showFullNote = function() {
-        // this.list.forEach(note => {
-        //     return note;
-        // });
-
-        // var index
-        return this.list
-        // for (index = 0; index < array.length -1 ; index++) {
-        //     array[index]
-        // };
+    Note.prototype.notePosition = function() {
+        return this._list.length - 1
     };
 
+    Note.prototype.getText = function(position){
+      return this._list[position]
+    };
     exports.Note = Note;
 })(this);
