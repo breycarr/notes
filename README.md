@@ -3,7 +3,7 @@
 
 The task for this week was to create a pure JS front end Single Page web app for making and displaying notes.
 
-![Screenshot](/public/images/Screenshot 2019-06-14 at 14.20.32.png)
+![Screenshot](/public/images/Homepage.png)
 
 ## Installation
 git clone this repo:
@@ -39,12 +39,15 @@ So I can see all the information in the note
 After loading the page, type your note in the text area, then click the button marked 'Create'. Your note will be added beneath the text area:
 
 ![Entering a note](/public/images/NewNoteScreenShot.png)
+
 ![An added note](/public/images/AddedNoteScreenShot.png)
 
-If your note is longer than 20 characters, a shortened version will appear beneath the text box
+If your note is longer than 20 characters, a shortened version will appear beneath the text box:
+
 ![An shortened note](/public/images/AbbreviatedNoteScreenShot.png)
 
-Clicking on the note will show open an alert box containing the full text of your note
+Clicking on the note will show open an alert box containing the full text of your note:
+
 ![Full note display](/public/images/FullMessageScreenShot.png)
 
 The alert can be dismissed to add additional notes or access other existing notes.
