@@ -14,5 +14,6 @@
     Note.prototype.getText = function(position){
       return this._list[position];
     };
+
     exports.Note = Note;
 })(this);
