@@ -7,17 +7,12 @@
         this._list.push(input)
     };
 
-    Note.prototype.showFullNote = function() {
-        // this.list.forEach(note => {
-        //     return note;
-        // });
-
-        // var index
-        return this._list
-        // for (index = 0; index < array.length -1 ; index++) {
-        //     array[index]
-        // };
+    Note.prototype.notePosition = function() {
+        return this._list.length - 1
     };
 
+    Note.prototype.getNote = function(position){
+      return this._list[position]
+    };
     exports.Note = Note;
 })(this);
