@@ -51,3 +51,15 @@ Clicking on the note will show open an alert box containing the full text of you
 ![Full note display](/public/images/FullMessageScreenShot.png)
 
 The alert can be dismissed to add additional notes or access other existing notes.
+
+## Additional Test Framework
+
+Rewrote Testing using an improved test Framework (Alice's - Makers coach)
+```
+files:
+  - note-test-withTestRunnerFramework.js
+  - testRunner.html
+  - testRunner.js
+
+Run by using 'open testRunner.html' on command line
+```
